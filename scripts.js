@@ -4,13 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function fetchWeather() {
     const selectedCity = document.getElementById("cities").value;
-    const apiKey = "9205f6d9965738450359040b8baed188"; // Replace with your actual API key
+    const apiKey = "9205f6d9965738450359040b8baed188"; 
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&appid=${apiKey}`;
 
     try {
       const response = await fetch(apiUrl);
       const data = await response.json();
-      console.log("Weather API Response:", data); // Log the response
+      console.log("Weather API Response:", data); 
       displayWeather(data);
     } catch (error) {
       console.error("Error fetching weather data:", error);
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function displayWeather(data) {
     const weatherInfo = document.getElementById("weather-info");
     if (data && data.main && data.weather) {
-      const temperature = data.main.temp - 273.15; // Convert temperature from Kelvin to Celsius
+      const temperature = data.main.temp - 273.15; 
       const weatherDescription = data.weather[0].description;
       const humidity = data.main.humidity;
       const windSpeed = data.wind.speed;
