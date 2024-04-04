@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Weather App</h1>
+      <div class="weather-form">
+        <label for="cities">Select a city:&nbsp;&nbsp;</label>
+        <select id="cities" class="city-select">
+          <option value="Calgary">Calgary</option>
+          <option value="Edmonton">Edmonton</option>
+          <option value="Toronto">Toronto</option>
+          <option value="New York">New York</option>
+        </select>
+        <button id="fetch-button" class="fetch-button">Get Weather</button>
+      </div>
+      <div id="weather-info" class="weather-info"></div>
+    </div>
+    <script src="scripts.js" defer></script>
+  </body>
+</html>
